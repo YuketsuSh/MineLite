@@ -1,5 +1,5 @@
 {
-    "id": "MineLite",
+    "id": "minelite",
     "name": "MineLite",
     "description": "Theme for Azuriom",
     "version": "1.0.7",
@@ -7,6 +7,5 @@
     "authors": [
         "Velyorix"
     ],
-    "azuriom_api": "1.1.0",
-    "apiId": "76"
+    "azuriom_api": "1.1.0"
 }
