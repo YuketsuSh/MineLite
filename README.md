@@ -35,7 +35,11 @@ Basé sur **Bootstrap 5**, il propose une landing page moderne mettant en avant 
 
 ## 📸 Aperçu
 
+# Serveur avec joinUrl
 ![screenshot](https://api.velyorix.com/api/v1/uploads/portfolio/MineLite/minelite_home.png-1747401304818-495123870.png)
+
+# Serveur sans joinUrl
+![screenshot](https://api.velyorix.com/api/v1/uploads/portfolio/MineLite/minelite_home2.png-1747401304812-495123870.png)
 
 ---
 
