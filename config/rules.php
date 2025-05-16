@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'hero_title' => ['nullable', 'string'],
+    'hero_subtitle' => ['nullable', 'string'],
+    'hero_button1' => ['nullable', 'string'],
+    'hero_button1_fav' => ['nullable', 'string'],
+    'hero_button1_url' => ['nullable', 'string'],
+    'cta_title' => ['nullable', 'string'],
+    'cta_subtitle' => ['nullable', 'string'],
+    'cta_button1' => ['nullable', 'string'],
+    'cta_button1_fav' => ['nullable', 'string'],
+    'cta_button1_url' => ['nullable', 'string'],
+    'cta_button2' => ['nullable', 'string'],
+    'cta_button2_fav' => ['nullable', 'string'],
+    'cta_button2_url' => ['nullable', 'string'],
+    'cta_button3' => ['nullable', 'string'],
+    'cta_button3_fav' => ['nullable', 'string'],
+    'cta_button3_url' => ['nullable', 'string'],
+    'footer_description' => ['nullable', 'string'],
+    'footer_links1' => ['nullable', 'array'],
+    'footer_titlelinks1' => ['nullable', 'string'],
+    'footer_links2' => ['nullable', 'array'],
+    'footer_titlelinks2' => ['nullable', 'string'],
+    'footer_server_version' => ['nullable', 'string'],
+];

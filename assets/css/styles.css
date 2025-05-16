@@ -1,0 +1,946 @@
+/* =======================
+    🎨 Variables Globales
+========================== */
+:root {
+    --mc-green: #5cb85c;
+    --mc-dark-green: #4a9e4a;
+    --mc-brown: #8b4513;
+    --mc-stone: #7a7a7a;
+    --mc-dark: #2d2d2d;
+    --mc-light: #f8f9fa;
+    --mc-text: #333;
+}
+
+
+/* =======================
+    🌍 Base Globale
+========================== */
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--mc-light);
+    color: var(--mc-text);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--mc-green);
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: var(--mc-dark-green);
+    text-shadow: 0 0 3px rgba(92, 184, 92, 0.5);
+}
+
+.mc-font {
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 1px;
+}
+
+
+/* =======================
+    🧭 Navigation
+========================== */
+.navbar {
+    background-color: var(--mc-dark) !important;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--mc-green) !important;
+}
+
+.navbar-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--mc-green, #4caf50);
+    object-fit: cover;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out, border-color 0.3s;
+}
+
+.navbar-avatar:hover {
+    transform: scale(1.05);
+    border-color: #66bb6a;
+}
+
+.notifications-dropdown {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.5rem;
+    position: relative;
+}
+
+.notifications-dropdown i {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+#notificationsCounter {
+    position: absolute;
+    top: 5px;
+    transform: translate(50%, -50%);
+    background-color: var(--mc-green, #f44336) !important;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.65rem;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    box-shadow: 0 0 0 2px #fff;
+    z-index: 10;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+/* =======================
+    📁 Nav Tabs
+========================== */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+    border-bottom: 2px solid var(--mc-green);
+}
+
+.nav-tabs {
+    border-bottom: 2px solid var(--mc-green);
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    color: var(--mc-dark) !important;
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: rgba(92, 184, 92, 0.1);
+    color: var(--mc-green);
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: var(--mc-green) !important;
+    background-color: #fff;
+    border-bottom: 3px solid var(--mc-green);
+    font-weight: bold;
+}
+
+/* =======================
+    🦸 Hero Section
+========================== */
+.hero-section {
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/* =======================
+    🎮 Boutons
+========================== */
+.mc-btn,
+.btn-primary {
+    background-color: var(--mc-green) !important;
+    color: white !important;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.mc-btn:hover,
+.btn-primary:hover {
+    background-color: var(--mc-dark-green) !important;
+    color: var(--mc-dark) !important;
+    transform: translateY(-3px);
+}
+
+.mc-btn-outline,
+.btn-outline-primary {
+    border: 2px solid var(--mc-green);
+    color: var(--mc-green);
+    background: transparent;
+}
+
+.mc-btn-outline:hover,
+.btn-outline-primary:hover {
+    background-color: var(--mc-green);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--mc-stone);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--mc-stone);
+    transform: translateY(-3px);
+}
+
+.btn-secondary:disabled,
+.btn-secondary.disabled {
+    background-color: #b0b0b0;
+    color: #eee;
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.btn-outline-secondary:disabled,
+.btn-outline-secondary.disabled {
+    border-color: #b0b0b0;
+    color: #b0b0b0;
+    background-color: transparent;
+    cursor: not-allowed;
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.btn-secondary.active,
+.btn-secondary:active,
+.btn-secondary.show {
+    background-color: #4f4f4f;
+    color: white;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    transform: none;
+}
+
+.btn-outline-secondary.active,
+.btn-outline-secondary:active,
+.btn-outline-secondary.show {
+    background-color: var(--mc-stone);
+    color: white;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+
+.btn-group .btn-secondary {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+.btn-group .btn-secondary:first-child {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    margin-left: 0;
+}
+
+.btn-group .btn-secondary:last-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.player-count {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: var(--mc-green);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: rotateX(10deg) rotateY(10deg);
+    transform-style: preserve-3d;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.btn:hover .player-count {
+    opacity: 1;
+    transform: rotateX(0deg) rotateY(0deg) translateY(-2px);
+}
+
+/* =======================
+    📦 Cartes & Sections
+========================== */
+.mc-card,
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.mc-card:hover,
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-body {
+    padding: 1.25rem;
+    background-color: white;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+.mc-icon {
+    font-size: 2rem;
+    color: var(--mc-green);
+    margin-bottom: 1rem;
+}
+
+
+/* =======================
+    🧱 Pixel Border
+========================== */
+.pixel-border {
+    border: 4px solid var(--mc-green);
+    position: relative;
+    z-index: 1;
+}
+
+.pixel-border::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 4px solid var(--mc-dark-green);
+    z-index: -1;
+}
+
+
+/* =======================
+    🧩 Composants Azuriom
+========================== */
+.alert {
+    border-left: 5px solid var(--mc-green);
+    border-radius: 0.25rem;
+    background-color: #e9f7ec;
+    color: #1f542a;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    color: #856404;
+}
+
+.badge {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.bg-success {
+    background-color: var(--mc-green) !important;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.table thead {
+    background-color: var(--mc-dark) !important;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
+.table>:not(caption)>*>* {
+    color: var(--mc-text);
+    background-color: var(--mc-light);
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 0 0 0.2rem rgba(92, 184, 92, 0.25) !important;
+}
+
+.form-control,
+textarea {
+    border-radius: 0.25rem;
+    border-color: var(--mc-stone);
+    background-color: #fff;
+    color: var(--mc-text);
+}
+
+.form-control:focus,
+textarea:focus {
+    border-color: var(--mc-green);
+    box-shadow: 0 0 0 0.2rem rgba(92, 184, 92, 0.25);
+    outline: none;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+/* =======================
+    🧩 EasyMDE
+========================== */
+.editor-toolbar {
+    background-color: var(--mc-dark);
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--mc-green);
+}
+
+.editor-toolbar .easymde-dropdown,
+.editor-toolbar button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-right: 0.25rem;
+    padding: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.editor-toolbar button:hover,
+.editor-toolbar .easymde-dropdown:hover {
+    background-color: var(--mc-green) !important;
+    color: white;
+}
+
+.editor-toolbar i.separator {
+    display: inline-block;
+    width: 1px;
+    height: 24px;
+    background-color: #555;
+    margin: 0 0.5rem;
+}
+
+.CodeMirror.cm-s-easymde,
+.CodeMirror-fullscreen,
+.editor-preview,
+.editor-toolbar.fullscreen {
+    background-color: white;
+    color: var(--mc-text);
+    font-family: monospace;
+    border: 1px solid var(--mc-stone);
+}
+
+.EasyMDEContainer .CodeMirror {
+    min-height: 300px;
+    border-radius: 0 0 0.25rem 0.25rem;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.editor-statusbar {
+    background-color: #f1f1f1;
+    color: var(--mc-stone);
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-top: 1px solid #ddd;
+}
+
+/* =======================
+    ⬆️ Scroll to Top
+========================== */
+.scroll-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--mc-green);
+    color: white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.scroll-top:hover {
+    background-color: var(--mc-dark-green);
+}
+
+/* =======================
+    🟩 Progress Bars Custom
+========================== */
+.progress {
+    background-color: #e6e6e6; /* gris clair */
+    border-radius: 0.5rem;
+    height: 1.5rem;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--mc-green);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    transition: width 0.6s ease;
+}
+
+.progress-stacked {
+    display: flex;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #e6e6e6;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-stacked > .progress-bar {
+    box-shadow: none;
+    transition: width 0.6s ease;
+}
+
+.progress-stacked > .progress-bar:nth-child(1) {
+    background-color: var(--mc-green);
+}
+
+.progress-stacked > .progress-bar:nth-child(2) {
+    background-color: var(--mc-dark-green);
+}
+
+.progress-stacked > .progress-bar:nth-child(3) {
+    background-color: var(--mc-stone);
+}
+
+.progress-bar span {
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5rem;
+    user-select: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* =======================
+    🧩 Layout Container
+========================== */
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* =======================
+    🧾 Copyright
+========================== */
+.copyright {
+    font-size: 0.875rem;
+    color: #bbb;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/* =======================
+    📝 Titres H1
+========================== */
+h1:not(.title-no-bg),
+.h1:not(.title-no-bg) {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--mc-green);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 0 var(--mc-dark-green);
+}
+
+.text-primary {
+    color: var(--mc-green) !important;
+    text-shadow: 1px 1px 0 var(--mc-dark-green);
+}
+
+/* =======================
+    🦶 Footer
+========================== */
+footer {
+    background-color: var(--mc-dark);
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--mc-green);
+}
+
+.footer-logo {
+    max-width: 50%;
+    height: auto;
+}
+
+
+/* =======================
+    🧱 Divers
+========================== */
+.server-ip {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.community-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.community-btn:hover {
+    transform: translateY(-3px);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.discord-btn {
+    background-color: #5865F2;
+}
+
+.vote-btn {
+    background-color: #FFCA28;
+    color: #212529 !important;
+}
+
+.ranking-btn {
+    background-color: #5cb85c;
+}
+
+.product-card .card-img-top,
+.article-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
+/* =======================
+    📱 Mobile First
+========================== */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 40vh;
+        padding: 1rem;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .hero-section h1,
+    .hero-section p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .player-count {
+        opacity: 1;
+        transform: rotateX(0deg) rotateY(0deg);
+        pointer-events: auto;
+        position: relative;
+        top: -8px;
+        right: -8px;
+        margin-top: 0.5rem;
+        display: inline-block;
+    }
+
+    .mc-font {
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand img {
+        height: 32px;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+
+    .feature-box {
+        padding: 1rem;
+    }
+
+    .mc-icon {
+        font-size: 1.5rem;
+    }
+
+    h1:not(.title-no-bg),
+    .h1:not(.title-no-bg) {
+        font-size: 1.75rem;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .footer-logo {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+        margin-top: 1rem;
+    }
+}
+
+
+/* =======================
+    🧩 Dropdowns
+========================== */
+.dropdown-menu {
+    background-color: white;
+    border: 1px solid var(--mc-stone);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    min-width: 10rem;
+}
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: var(--mc-text);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--mc-green);
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =======================
+    🧩 Cards étendues
+========================== */
+.card-header {
+    background-color: var(--mc-green);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--mc-text);
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: var(--mc-stone);
+    margin-bottom: 0.75rem;
+}
+
+
+/* =======================
+    🧾 List Group
+========================== */
+.list-group {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.list-group-item {
+    padding: 0.75rem 1rem;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item:hover {
+    background-color: #f6f6f6;
+}
+
+.list-group-item.active {
+    background-color: var(--mc-green);
+    color: white;
+    font-weight: bold;
+    border-color: var(--mc-dark-green);
+}
+
+
+/* =======================
+    🪟 Modals
+========================== */
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+}
+
+.modal-dialog.modal-lg {
+    max-width: 800px;
+}
+
+.modal-content {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: var(--mc-green);
+    color: white;
+    padding: 1rem;
+    border-bottom: 1px solid var(--mc-dark-green);
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 1.25rem;
+    background-color: white;
+    color: var(--mc-text);
+}
+
+.modal-footer {
+    padding: 1rem;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* =======================
+    📢 Status Message
+========================== */
+#status-message {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--mc-green);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+    animation: fadeInOut 4s ease-in-out forwards;
+}
+
+#status-message:empty {
+    display: none;
+}
+
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+}

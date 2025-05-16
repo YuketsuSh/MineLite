@@ -1,0 +1,12 @@
+{
+    "id": "MineLite",
+    "name": "MineLite",
+    "description": "Theme for Azuriom",
+    "version": "1.0.7",
+    "url": "https://velyorix.com",
+    "authors": [
+        "Velyorix"
+    ],
+    "azuriom_api": "1.1.0",
+    "apiId": "76"
+}
